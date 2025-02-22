@@ -10,4 +10,4 @@ spec:
       protocol: TCP
       port: 8080
       targetPort: vproapp-port
-  type: ClusterIP 
+  type: LoadBalancer 
