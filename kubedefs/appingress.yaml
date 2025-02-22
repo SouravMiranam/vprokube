@@ -5,14 +5,15 @@ metadata:
   annotations:
     nginx.ingress.kubernetes.io/use-regex: "true"
 spec:
+  ingressClassName: nginx
   rules:
-    - host: vprofile.kafinfo.life
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: vproapp-service
-                port:
-                  number: 8080
+  - host: vprofile.kafinfo.life
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: vproapp-service
+            port:
+              number: 8080
